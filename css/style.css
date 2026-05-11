@@ -1,0 +1,167 @@
+/*------------ global style ------------*/
+:root{
+    --main-color:#ff206f;
+}
+*::selection{
+    background-color: var(--main-color);
+    color: white;
+}
+html{
+    scrollbar-color: var(--main-color)  rgb(215, 213, 214)  ;
+
+}
+a{
+    text-decoration: none;
+}
+.text-color-red{
+    color: var(--main-color);
+}
+.cursor-progress{
+    cursor: pointer;
+}
+.title p{
+    font-size: 6rem;
+    color: rgba(220, 220, 220, 0.358);
+    letter-spacing: 15px;
+}
+@media  (max-width:768px) {
+    .title p{
+        font-size: 3rem;
+    }
+    
+}
+/* --------------start navbar-------------- */
+
+.navbar-nav .nav-link.active{
+    color: var(--main-color) ;
+}
+.navbar-nav .nav-link{
+    color: white;
+    transition: all 1s;
+}
+.navbar-nav .nav-link:hover{
+    color: var(--main-color);
+
+}
+/* --------------end navbar-------------- */
+/* --------------start header-------------- */
+
+#Home{
+    background-image:url(../photo/about.jpg);
+    height: 100vh;
+    color: white;
+    background-size: cover;
+    background-position: top ;
+}
+#Home .icon{
+    border: 1px solid rgba(220, 220, 220, 0.506);
+    width: 50px;
+    height: 50px;
+    transition: all 1s;
+}
+#Home .icon:hover{
+    border-color: white;
+}
+#Home .icon i{
+    display: block;
+    transition: all 1s;
+    color: white;
+}
+
+#Home .icon:hover i{
+    color: var(--main-color);
+}
+
+/* --------------end header-------------- */
+/* --------------start about-------------- */
+#about{
+    background-image: url(../photo/about-bg.jpg) ;
+    background-size: cover;
+}
+.about-p-active{
+    color: var(--main-color);
+}
+.about-contant p{
+
+    font-size:19px;
+
+}
+
+/* --------------end about-------------- */
+
+
+/* --------------start services-------------- */
+.services-item h3{
+    position: relative;
+}
+.services-item h3::after{
+    content: "";
+    width: 50px;
+    height: 2px;
+    background-color: var(--main-color);
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 1s;
+}
+.services-item:hover h3::after{
+    width: 100px;
+}
+
+/* --------------end services-------------- */
+/* --------------start testmonial-------------- */
+
+.testmonial-item img{
+    width: 60px;
+    height: 60px;
+}
+
+.carousel-indicators [data-bs-target]{
+    width: 50px ;
+    height: 50px;
+    border-radius: 50%;
+    text-indent: 0px;
+    transform: translateY(-5%);
+}
+/* --------------end testmonial-------------- */
+/* --------------start portfolio-------------- */
+.nav-pills .nav-link.active{
+    background-color: var(--main-color);
+}
+.nav-pills .nav-link{
+    color: black;
+}
+
+
+
+.portfolio-item .layer{
+    top: 0;
+    right: 15px;
+    bottom: 100%;
+    left: 15px;
+    transition: all 2s;
+    opacity: 0;
+}
+.portfolio-item:hover .layer{
+    opacity: 1;
+    bottom: 15px;
+}
+.portfolio-item img{
+    transition: all 1s;
+}
+.portfolio-item:hover img{
+    filter: blur(3px);
+}
+.modal-content{
+    background-color: transparent;
+    border: none;
+}
+.btn-close{
+    --bs-btn-close-bg:none;
+    --bs-btn-close-opacity:1;
+}
+
+
+
+/* --------------end portfolio-------------- */
